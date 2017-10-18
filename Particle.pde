@@ -19,7 +19,7 @@ class Particle {
     velocity.add(acceleration);
     location.add(velocity);
   }
-  
+
   void setSize(float size) {
     this.size = size;
   }
@@ -42,5 +42,9 @@ class Particle {
 
   void setColor(color c) {
     fillColor = c;
+  }
+
+  boolean isOutOfSketch() {
+    return location.y > height;
   }
 }
